@@ -1,8 +1,7 @@
 #!/bin/bash
-yum update -y
-yum install -y httpd git
-systemctl start httpd
-systemctl enable httpd
+sudo apt update -y
+sudo apt install apache2 -y
 cd /var/www/html
 git init
-git pull https://github.com/drehnstrom/space-invaders.git
+git fetch https://github.com/drehnstrom/space-invaders.git
+git reset --hard FETCH_HEAD
